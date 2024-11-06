@@ -53,7 +53,7 @@ O candidato deve focar na utilização das melhores práticas de programação, 
 - [Documentação do ReactJS](https://reactjs.org/docs/getting-started.html)
 - [Documentação do NextJS](https://nextjs.org/docs)
 - [Documentação do TypeScript](https://www.typescriptlang.org/docs/)
-- [Documentação do Laravel](https://www.typescriptlang.org/docs/](https://laravel.com/))
+- [Documentação do Laravel](https://laravel.com/)
 
 ## Contato
 
