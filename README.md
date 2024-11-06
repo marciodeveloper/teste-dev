@@ -12,10 +12,6 @@ O objetivo deste repositório é apresentar um teste para a contratação de um 
 
 2. **Listagem e Filtragem de Personagens**
    - Exibir uma lista de personagens da série Rick and Morty.
-   - Implementar filtros eficientes (por exemplo: por nome, status, espécie, gênero, etc.) para facilitar a busca dos personagens.
-
-3. **Página do Personagem**
-   - Criar uma página dedicada para cada personagem, mostrando informações detalhadas sobre ele.
 
 4. **Menu com Navegação**
    - Implementar um menu de navegação para facilitar a transição entre a lista de personagens e outras páginas relevantes.
@@ -24,10 +20,14 @@ O objetivo deste repositório é apresentar um teste para a contratação de um 
    - Utilizar ReactJS/NextJS para o front-end e uma API Laravel para o Back-End.
 
 6. **Diferenciais**
+Os diferenciais serão levados em consideração, mas não são requisitos da aplicação.
    - Qualquer funcionalidade a mais será um diferencial, como por exemplo: controle de cache, paginação, etc.
-   - TypeScript é um diferencial e será considerado positivamente.
+   - TypeScript.
    - Tailwindcss.
-   - Testes automatizados tanto para o Laravel quanto para React.
+   - Testes automatizados tanto para o Laravel quanto para React
+   - Implementar filtros (por exemplo: por nome, status, espécie, gênero, etc.) para facilitar a busca dos personagens.
+   - Criar uma página dedicada para cada personagem, mostrando informações detalhadas sobre ele.
+   - Banco de dados com MysSql.
 
 ## Foco
 
