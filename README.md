@@ -1,51 +1,157 @@
-# Inffus - Teste para Desenvolvedor Web
+# **Rick and Morty Web Application**
 
-## Objetivo
+[![PHP Version](https://img.shields.io/badge/php-%3E%3D%207.4-blue)](https://www.php.net/)
+[![Node.js Version](https://img.shields.io/badge/node.js-%3E%3D%2014-brightgreen)](https://nodejs.org/)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-O objetivo deste repositório é apresentar um teste para a contratação de um desenvolvedor Web. O candidato deverá consumir a API do Rick and Morty e desenvolver uma aplicação que atenda aos seguintes requisitos:
+## **Descrição**
 
-## Requisitos
+Aplicação web desenvolvida para listar e filtrar personagens da série **Rick and Morty**. O projeto é composto por uma API back-end construída com Laravel e um front-end desenvolvido com Next.js e React.
 
-1. **API Laravel**
-  - Desenvolver uma API utilizando Laravel, a API deve consumir os dados da API Rick and Morty e salvar no banco de dados.
-  - Endpoints para consumo dos dados salvos com filtragem e paginação.
+## **Índice**
 
-2. **Listagem e Filtragem de Personagens**
-   - Exibir lista de personagens da série Rick and Morty com informações simplificadas de forma páginada.
-   - Implementar filtros (exemplo: nome, status, espécie, gênero, etc.) para facilitar a busca pelos personagens.
-   - Criar uma página dedicada para cada personagem, mostrando informações detalhadas sobre o mesmo.
+- [Pré-requisitos](#pré-requisitos)
+- [Instalação](#instalação)
+  - [Back-End](#back-end)
+  - [Front-End](#front-end)
+- [Uso](#uso)
+- [Testes](#testes)
+  - [Back-End](#back-end-1)
+  - [Front-End](#front-end-1)
+- [Possíveis Problemas](#possíveis-problemas)
+- [Contribuição](#contribuição)
+- [Licença](#licença)
 
-3. **Tecnologias Utilizadas**
-   - Utilizar ReactJS/NextJS para o Front-End e Laravel para o Back-End.
+## **Pré-requisitos**
 
-4. **README.MD**
-   - Adicione um readme.md com instruções para configurar e testar o ambiente local.
+Certifique-se de ter as seguintes ferramentas instaladas em seu ambiente:
 
-## Diferenciais
+- **PHP** >= 7.4
+- **Composer**
+- **Node.js** >= 14
+- **npm** ou **yarn**
+- **MySQL** ou outro banco de dados compatível
 
-Os diferenciais serão levados em consideração, mas não são requisitos da aplicação:
-   - Funcionalidades a mais serão levadas como diferenciais, como por exemplo controle de cache.
-   - TypeScript.
-   - Tailwindcss.
-   - Testes automatizados, tanto para o Laravel quanto para o React.
-   - Banco de dados com MySql.
+## **Instalação**
 
-## Como Submeter o Teste
+### **Back-End**
 
-1. Faça um fork deste repositório.
-2. Crie uma nova branch para o seu desenvolvimento.
-3. Escreva um readme.md com instruções para configurar e testar o projeto em um ambiente local.
-4. Após concluir o desenvolvimento, crie um pull request com a sua branch.
-5. Prazo é de 72h (3 dias) após o recebimento do teste.
+1. **Clone o repositório:**
 
-## Recursos Úteis
+   ```bash
+   git clone <repo-url>
+   ```
 
-- [Documentação da API do Rick and Morty](https://rickandmortyapi.com/documentation)
-- [Documentação do ReactJS](https://reactjs.org/docs/getting-started.html)
-- [Documentação do NextJS](https://nextjs.org/docs)
-- [Documentação do TypeScript](https://www.typescriptlang.org/docs/)
-- [Documentação do Laravel](https://laravel.com/)
+2. **Navegue até o diretório do back-end:**
 
-## Contato
+   ```bash
+   cd rick-and-morty-api
+   ```
 
-Se você tiver alguma dúvida, entre em contato com Suporte através do e-mail suporte@inffus.com.br.
+3. **Instale as dependências do PHP:**
+
+   ```bash
+   composer install
+   ```
+
+4. **Copie o arquivo de exemplo .env e configure as variáveis de ambiente:**
+
+   ```bash
+   cp .env.example .env
+   ```
+
+   - Configure as informações de conexão com o banco de dados no arquivo `.env`.
+
+5. **Gere a chave da aplicação:**
+
+   ```bash
+   php artisan key:generate
+   ```
+
+6. **Execute as migrações e seeders:**
+
+   ```bash
+   php artisan migrate --seed
+   ```
+
+7. **Inicie o servidor de desenvolvimento:**
+
+   ```bash
+   php artisan serve
+   ```
+
+   - A API estará disponível em http://localhost:8000.
+
+## **Front-End**
+
+1. **Navegue até o diretório do front-end:**
+
+   ```bash
+   cd ../rick-and-morty-frontend
+   ```
+
+2. **Instale as dependências do Node.js:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Crie um arquivo de ambiente local:**
+
+   ```bash
+   cp .env.example .env.local
+   ```
+
+   - Configure a URL da API back-end no arquivo .env.local.
+
+4. **Inicie a aplicação:**
+
+   ```bash
+   npm run dev
+   ```
+
+   - A aplicação estará disponível em http://localhost:3000.
+
+## **Uso**
+
+Acesse http://localhost:3000 em seu navegador para visualizar a aplicação. Você poderá listar, filtrar e visualizar detalhes dos personagens da série Rick and Morty.
+
+## **Testes**
+
+### **Back-End**
+
+Para executar os testes do back-end, utilize:
+
+```bash
+php artisan test
+```
+
+### **Front-End**
+
+Para executar os testes do front-end, utilize:
+
+```bash
+npm run test
+```
+
+## **Possíveis Problemas**
+
+- Erro de conexão com o banco de dados:
+
+  Verifique se o servidor do banco de dados está em execução e se as credenciais no arquivo `.env` estão corretas.
+
+- Porta já em uso:
+
+  Se as portas padrão (8000 para o back-end e 3000 para o front-end) estiverem em uso, você pode especificar portas diferentes ao iniciar os servidores.
+
+- Problemas com dependências:
+
+  Certifique-se de que todas as dependências foram instaladas corretamente e que suas versões atendem aos pré-requisitos.
+
+## **Contribuição**
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests para melhorar este projeto.
+
+## **Licença**
+
+Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para mais detalhes.
